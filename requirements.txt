@@ -1,18 +1,17 @@
-streamlit
+streamlit==1.27.2
 pandas
 pytesseract
 Pillow
-transformers
-torch
+transformers==4.34.0
+torch==2.1.2
 sentence-transformers
 openai-whisper
 scikit-learn
-librosa
-torchaudio
+librosa==0.10.1
+torchaudio==2.1.2
 accelerate
 ffmpeg-python
 python-multipart
 sentencepiece
-transformers== 4.54.0
-
 faiss-cpu
+protobuf==3.20.3
