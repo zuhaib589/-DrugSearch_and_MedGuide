@@ -7,12 +7,18 @@ from rag_helper import build_knowledge_base, get_medical_guidance_with_llm
 st.set_page_config(page_title="💊 GenAI Drug Finder", layout="centered")
 st.title("💊 GenAI Drug Finder & AI Health Guide")
 
+st.info("✅ App loaded successfully.")
+
 # ------------------------------
 # Load data and Knowledge Base
 # ------------------------------
-medicine_df = pd.read_csv("data/medicine_data.csv")
-billing_data_path = "data/billing_data.csv"
-kb_index, kb_texts, kb_sources = build_knowledge_base("data/medical_guides")
+try:
+    medicine_df = pd.read_csv("data/medicine_data.csv")
+    billing_data_path = "data/billing_data.csv"
+    kb_index, kb_texts, kb_sources = build_knowledge_base("data/medical_guides")
+except Exception as e:
+    st.error(f"Failed to load resources: {e}")
+    st.stop()
 
 # ------------------------------
 # Medicine Search Section
@@ -71,7 +77,6 @@ if disease_input == "other":
 selected_disease = custom_input.strip() if disease_input == "other" else disease_input
 
 if selected_disease:
-    # Check if selected_disease is present in any of the knowledge base texts
     found = any(selected_disease.lower() in text.lower() for text in kb_texts)
 
     if found:

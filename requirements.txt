@@ -4,12 +4,11 @@ pytesseract
 Pillow
 transformers==4.34.0
 torch==2.1.2
+torchaudio==2.1.2
 sentence-transformers
 openai-whisper
 scikit-learn
 librosa==0.10.1
-torchaudio==2.1.2
-accelerate
 ffmpeg-python
 python-multipart
 sentencepiece
