@@ -2,9 +2,9 @@ streamlit==1.27.2
 pandas
 pytesseract
 Pillow
-transformers==4.34.0
-torch==2.1.2
-torchaudio==2.1.2
+transformers==4.38.2        # Upgraded to match torch>=2.5
+torch==2.7.1                 # ✅ Compatible with Python 3.13
+torchaudio==2.7.1            # ✅ Also matches torch 2.7.1
 sentence-transformers
 openai-whisper
 scikit-learn
