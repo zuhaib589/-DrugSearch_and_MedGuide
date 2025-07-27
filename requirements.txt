@@ -1,0 +1,18 @@
+streamlit
+pandas
+pytesseract
+Pillow
+transformers
+torch
+sentence-transformers
+openai-whisper
+scikit-learn
+librosa
+torchaudio
+accelerate
+ffmpeg-python
+python-multipart
+sentencepiece
+transformers== 4.54.0
+
+faiss-cpu
